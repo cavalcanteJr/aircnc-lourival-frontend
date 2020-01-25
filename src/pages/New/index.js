@@ -28,6 +28,9 @@ export default function New({ history }) {
 
     await api.post('/spots', data, {
       headers: { user_id }
+    }).then(response => {
+      console.log(response.data._id)
+      console.log(response.data.url)
     })
 
     history.push('/dashboard');
